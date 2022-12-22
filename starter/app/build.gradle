@@ -9,6 +9,7 @@ android {
     compileSdkVersion 30
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
     defaultConfig {
         applicationId 'com.example.android.politicalpreparedness'
@@ -61,6 +62,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit: $version_retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
 
     // Moshi
     implementation "com.squareup.moshi:moshi:$version_moshi"
@@ -69,8 +71,14 @@ dependencies {
 
     // Glide
     //TODO: Add Glide Implementation
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$version_glide"
+
+    //sdp
+    implementation "com.intuit.sdp:sdp-android:$version_sdp"
 
     //Room
+    implementation "androidx.room:room-ktx:$version_room"
     implementation "androidx.room:room-runtime:$version_room"
     kapt "androidx.room:room-compiler:$version_room"
 

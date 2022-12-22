@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.android.politicalpreparedness.representative.model.Representative" />
+
+        <variable
+            name="representativeListener"
+            type="com.example.android.politicalpreparedness.representative.adapter.RepresentativeListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> representativeListener.onClickItem(model)}"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_position"
+            style="@style/TitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.office.name}"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Vip Test Election" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/ContentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.official.name}"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_web"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tv_position"
+            tools:text="Vip Test Election" />
+
+        <TextView
+            android:id="@+id/tv_details"
+            style="@style/ContentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.official.party}"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="Vip Test Election" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:contentDescription="@string/iv_avatar"
+            android:padding="4dp"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintBottom_toBottomOf="@id/tv_details"
+            app:layout_constraintEnd_toStartOf="@id/tv_position"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_position"
+            app:profileImage="@{model.official.photoUrl}" />
+
+        <ImageView
+            android:id="@+id/iv_twitter"
+            style="@style/LinkButton"
+            android:contentDescription="@string/twitter_button"
+            android:src="@drawable/ic_twitter"
+            app:layout_constraintBottom_toBottomOf="@id/tv_details"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_facebook"
+            style="@style/LinkButton"
+            android:contentDescription="@string/twitter_button"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toBottomOf="@id/tv_details"
+            app:layout_constraintEnd_toStartOf="@id/iv_twitter" />
+
+        <ImageView
+            android:id="@+id/iv_web"
+            style="@style/LinkButton"
+            android:contentDescription="@string/twitter_button"
+            android:src="@drawable/ic_www"
+            app:layout_constraintBottom_toBottomOf="@id/tv_details"
+            app:layout_constraintEnd_toStartOf="@id/iv_facebook" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

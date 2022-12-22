@@ -8,7 +8,69 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="BaseText">
+        <item name="android:textColor">@color/gray50</item>
+        <item name="android:paddingHorizontal">@dimen/_8sdp</item>
+    </style>
     <!-- TODO: Add necessary styles -->
+    <style name="StyleButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="SectionText" parent="BaseText">
+        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:layout_marginVertical">@dimen/_16sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TitleText" parent="BaseText">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ContentText" parent="BaseText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="VotingTextStyle" parent="BaseText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="VotingHeaderStyle" parent="BaseText">
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:layout_marginVertical">@dimen/_16sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RepresentativeButton">
+        <item name="android:paddingVertical">@dimen/_8sdp</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:background">@drawable/bg_navigation_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LinkButton">
+        <item name="android:layout_width">@dimen/_32sdp</item>
+        <item name="android:layout_height">@dimen/_32sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+    </style>
 
 </resources>

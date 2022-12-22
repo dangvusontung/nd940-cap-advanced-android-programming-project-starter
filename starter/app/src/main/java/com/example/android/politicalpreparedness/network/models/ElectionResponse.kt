@@ -1,9 +1,8 @@
 package com.example.android.politicalpreparedness.network.models
 
-import com.squareup.moshi.JsonClass
+import com.squareup.moshi.Json
 
-@JsonClass(generateAdapter = true)
 data class ElectionResponse(
-        val kind: String,
-        val elections: List<Election>
+        @Json(name="elections")val elections: List<Election>,
+        @Json(name="kind")val kind: String,
 )

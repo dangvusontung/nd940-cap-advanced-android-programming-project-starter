@@ -3,5 +3,34 @@
     <string name="app_name">Political Preparedness</string>
 
     <!-- TODO: Add necessary string values -->
-
+    <string name="up_coming_elections">Upcoming elections</string>
+    <string name="find_my_representatives">Find my Representatives</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="iv_avatar">Representative Avatar</string>
+    <string name="twitter_button">Twitter Button</string>
+    <string name="election_information">Election Information</string>
+    <string name="corresponding_address">Corresponding Address</string>
+    <string name="follow_elections">Follow Election</string>
+    <string name="unfollow_elections">Unfollow Election</string>
+    <string name="no_data_for_voting_url">No data for voting location</string>
+    <string name="no_data_for_ballot_url">No data for ballot url</string>
+    <string name="no_data_for_address">No address</string>
+    <string name="save_election_failure">Save Election Failure</string>
+    <string name="remove_election_failure">Remove Election Failure</string>
+    <string name="save_election_success">Save Election Success</string>
+    <string name="remove_election_success">Remove Election Success</string>
+    <string name="representative_search">Representative Search</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2 (Optional)</string>
+    <string name="city">City</string>
+    <string name="use_my_location">Use my location</string>
+    <string name="my_representative">My Representatives</string>
+    <string name="empty_representatives">There have no representative</string>
+    <string name="location_permission_required">Location permission is required!</string>
+    <string name="address_line_1_empty">Address Line 1 field is empty</string>
+    <string name="city_empty">City is field empty</string>
+    <string name="state_empty">State field is empty</string>
+    <string name="zip_empty">Zip field is empty</string>
+    <string name="zip">Zip</string>
+    <string name="cannot_get_representatives">Can\'t get representatives</string>
 </resources>
